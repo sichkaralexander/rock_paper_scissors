@@ -1,0 +1,7 @@
+from aiogram import Router
+from aiogram.types import Message 
+from lexicon.lexicon import lexicon_ru
+router : Router = Router()
+@router.message()
+async def send_answer(message : Message):
+    await message.answer(text=lexicon_ru['question'])
